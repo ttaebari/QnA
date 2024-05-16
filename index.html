@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CCI : 삼성전자 종합지수</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scroll-container" style="display: flex;">
+        <div>
+            <div class="upper">
+                <h3>우리는 CCI에 근거한 재산의 결정에 <br>
+                    책임이 없음을 분명히 합니다
+                </h3>
+                <h1>CCI : 삼성전자 종합지수</h1>
+                <h3 id="current_date">
+                    <script>
+                        date = new Date();
+                        year = date.getFullYear()
+                        month = date.getMonth() + 1;
+                        day = date.getDate();
+                        document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
+                    </script>
+                </h3>
+            </div>
+            <div class="translate">
+                <h2 onclick="translate_eng()">eng</h2>
+                <h2> /</h2>
+                <h2 onclick="translate_kor()">korean</h2>
+            </div>
+            <div id="mainTable" style="display: table;">
+                <table id="mt">
+                    <tr>
+                        <th>기업</th>
+                        <th>오늘 점수</th>
+                        <th>이전 점수</th>
+                        <th>+ or -</th>
+                        <th>바뀐 변화 보기</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="detailTable" style="display: none;">
+                <table id="dt">
+                    <tr>
+                        <th>No</th>
+                        <th>구분</th>
+                        <th>오늘 점수</th>
+                        <th>어제 점수</th>
+                        <th>+ or -</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="button-container">
+                <button class="btn-2" onclick="showOriginal()">원본 보기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="e-scroll-container" style="display: none;">
+        <div class="e-upper">
+            <h3>we clarify that we are not reponsible for <br>
+                the decisions of the prties based on CCI
+            </h3>
+            <h1>CCI : Samsung Electronics</h1>
+            <h3 id="e-current_date">
+                <script>
+                    date = new Date();
+                    year = date.getFullYear()
+                    month = date.getMonth() + 1;
+                    day = date.getDate();
+                    document.getElementById("e-current_date").innerHTML = year + "/" + month + "/" + day;
+                </script>
+            </h3>
+        </div>
+        <div class="e-translate">
+            <h2 onclick="translate_eng()">eng</h2>
+            <h2> /</h2>
+            <h2 onclick="translate_kor()">korean</h2>
+        </div>
+        <div id="e-mainTable" style="display: table;">
+            <table id="e-mt">
+                <tr>
+                    <th>Company</th>
+                    <th>Today Index</th>
+                    <th>Last Index</th>
+                    <th>+ or -</th>
+                    <th>Factor of Change</th>
+                </tr>
+            </table>
+        </div>
+        <div id="e-detailTable" style="display: none;">
+            <table id="e-dt">
+                <tr>
+                    <th>No</th>
+                    <th>Type</th>
+                    <th>Today Score</th>
+                    <th>Last Score</th>
+                    <th>+ or -</th>
+                </tr>
+            </table>
+        </div>
+        <div class="e-button-container">
+            <button class="btn-2" onclick="e_showOriginal()">show Original</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

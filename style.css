@@ -1,0 +1,197 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+div {
+    width: 95%;
+    /* 표와 같은 너비를 가짐 */
+    text-align: center;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    /* flex 레이아웃 사용 */
+    flex-direction: column;
+    /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
+    /* 세로 중심으로 자식 요소 정렬 */
+    text-align: center;
+    /* 텍스트 중앙 정렬 */
+    margin: auto;
+}
+
+h3 {
+    width: 400px;
+    margin-left: 10px;
+}
+
+
+.upper {
+    margin: auto;
+    width: 1500px;
+    /* 표와 같은 너비를 가짐 */
+    text-align: center;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: row;
+    /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
+    /* 세로 중심으로 자식 요소 정렬 */
+    justify-content: space-between;
+    /* 각 요소를 양 끝과 중앙에 배치 */
+    margin-bottom: 20px;
+    /* 제목 아래 여백 */
+}
+
+.e-upper {
+    margin: auto;
+    width: 1500px;
+    /* 표와 같은 너비를 가짐 */
+    text-align: center;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: row;
+    /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
+    /* 세로 중심으로 자식 요소 정렬 */
+    justify-content: space-between;
+    /* 각 요소를 양 끝과 중앙에 배치 */
+    margin-bottom: 20px;
+    /* 제목 아래 여백 */
+}
+
+.translate {
+    width: 1600px;
+    /* 표와 같은 너비를 가짐 */
+    height: 10px;
+    text-align: right;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: row;
+    /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
+    /* 세로 중심으로 자식 요소 정렬 */
+    margin-bottom: 20px;
+}
+
+.e-translate {
+    width: 1600px;
+    /* 표와 같은 너비를 가짐 */
+    height: 10px;
+    text-align: right;
+    /* 텍스트 중앙 정렬 */
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: row;
+    /* 자식 요소들을 세로로 정렬 */
+    align-items: center;
+    /* 세로 중심으로 자식 요소 정렬 */
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 900px;
+    /* 최대 높이 설정 */
+    overflow-y: auto;
+    /* 세로 방향으로만 스크롤 추가 */
+}
+
+.e-scroll-container {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 900px;
+    /* 최대 높이 설정 */
+    overflow-y: auto;
+    /* 세로 방향으로만 스크롤 추가 */
+}
+
+table {
+    width: 1600px;
+    /* div 내에서 전체 너비 사용 */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: auto;
+    /* 제목과 표 사이 간격 */
+    font-size: 30px;
+    font-weight: 800;
+    table-layout: fixed;
+    /* 테이블 레이아웃 고정 */
+}
+
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    /* 각 셀의 폭을 동일하게 설정 */
+}
+
+th {
+    background-color: ivory;
+    text-align: center;
+}
+
+.high-score {
+    background-color: rgb(108, 108, 214);
+    color: white;
+    /* 텍스트 색상 변경 */
+}
+
+.same-score {
+    background-color: white;
+}
+
+.low-score {
+    background-color: rgb(216, 115, 115);
+    color: white;
+}
+
+.button-container {
+    display: inline-block;
+    margin-top: 10px;
+    /* 버튼과 표 사이 간격 */
+}
+
+.e-button-container {
+    display: inline-block;
+    margin-top: 10px;
+    /* 버튼과 표 사이 간격 */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* 버튼 위에 마우스를 올렸을 때 커서 변경 */
+    margin: 0 5px;
+    /* 버튼 사이 간격 */
+}
+
+.btn-2 {
+    color: #fff;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    border: none;
+
+}
+
+.btn-2:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-2:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+inset -4px -4px 6px 0 rgba(255,255,255,.9),
+inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
