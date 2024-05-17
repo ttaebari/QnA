@@ -37,7 +37,8 @@
                         <th>오늘 점수</th>
                         <th>이전 점수</th>
                         <th>+ or -</th>
-                        <th>바뀐 변화 보기</th>
+                        <th>바뀐 변화</th>
+                        <th>점수 기록</th>
                     </tr>
                 </table>
             </div>
@@ -49,6 +50,63 @@
                         <th>오늘 점수</th>
                         <th>어제 점수</th>
                         <th>+ or -</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="recordTable" style="display: none;">
+                <table id="rt">
+                    <tr>
+                        <th>No</th>
+                        <th>구분</th>
+                        <th id="today">
+                            <script>
+                                date = new Date();
+                                year = date.getFullYear()
+                                month = date.getMonth() + 1;
+                                day = date.getDate();
+                                document.getElementById("today").innerHTML = year + "/" + month + "/" + day;
+                            </script>
+                        </th>
+                        <th id="today-7">
+                            <script>
+                                date = new Date();
+                                year = date.getFullYear()
+                                month = date.getMonth();
+                                day = date.getDate();
+                                date1 = new Date(year, month, day - 7);
+                                year = date1.getFullYear()
+                                month = date1.getMonth() + 1;
+                                day = date1.getDate();
+                                document.getElementById("today-7").innerHTML = year + "/" + month + "/" + day;
+                            </script>
+                        </th>
+                        <th id="today-14">
+                            <script>
+                                date = new Date();
+                                year = date.getFullYear()
+                                month = date.getMonth();
+                                day = date.getDate();
+                                date1 = new Date(year, month, day - 14);
+                                year = date1.getFullYear()
+                                month = date1.getMonth() + 1;
+                                day = date1.getDate();
+                                document.getElementById("today-14").innerHTML = year + "/" + month + "/" + day;
+                            </script>
+                        </th>
+                        <th id="today-21">
+                            <script>
+                                date = new Date();
+                                year = date.getFullYear()
+                                month = date.getMonth();
+                                day = date.getDate();
+                                date1 = new Date(year, month, day - 21);
+                                year = date1.getFullYear()
+                                month = date1.getMonth() + 1;
+                                day = date1.getDate();
+                                document.getElementById("today-21").innerHTML = year + "/" + month + "/" + day;
+                            </script>
+                        </th>
+                        <th>점수 곡선</th>
                     </tr>
                 </table>
             </div>
@@ -87,6 +145,7 @@
                     <th>Last Index</th>
                     <th>+ or -</th>
                     <th>Factor of Change</th>
+                    <th>Index Records</th>
                 </tr>
             </table>
         </div>
@@ -98,6 +157,63 @@
                     <th>Today Score</th>
                     <th>Last Score</th>
                     <th>+ or -</th>
+                </tr>
+            </table>
+        </div>
+        <div id="e-recordTable" style="display: none;">
+            <table id="e-rt">
+                <tr>
+                    <th>No</th>
+                    <th>Type</th>
+                    <th id="e-today">
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear()
+                            month = date.getMonth() + 1;
+                            day = date.getDate();
+                            document.getElementById("e-today").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                    </th>
+                    <th id="e-today-7">
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear()
+                            month = date.getMonth();
+                            day = date.getDate();
+                            date1 = new Date(year, month, day - 7);
+                            year = date1.getFullYear()
+                            month = date1.getMonth() + 1;
+                            day = date1.getDate();
+                            document.getElementById("e-today-7").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                    </th>
+                    <th id="e-today-14">
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear()
+                            month = date.getMonth();
+                            day = date.getDate();
+                            date1 = new Date(year, month, day - 14);
+                            year = date1.getFullYear()
+                            month = date1.getMonth() + 1;
+                            day = date1.getDate();
+                            document.getElementById("e-today-14").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                    </th>
+                    <th id="e-today-21">
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear()
+                            month = date.getMonth();
+                            day = date.getDate();
+                            date1 = new Date(year, month, day - 21);
+                            year = date1.getFullYear()
+                            month = date1.getMonth() + 1;
+                            day = date1.getDate();
+                            document.getElementById("e-today-21").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                    </th>
+                    <th>Score Curve</th>
                 </tr>
             </table>
         </div>
