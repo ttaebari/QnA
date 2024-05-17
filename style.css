@@ -135,6 +135,10 @@ td {
     /* 각 셀의 폭을 동일하게 설정 */
 }
 
+tr.dynamic-row {
+    height: 200px; /* 동적으로 추가되는 행의 높이 */
+}
+
 th {
     background-color: ivory;
     text-align: center;
@@ -190,8 +194,13 @@ button {
 }
 
 .btn-2:hover {
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-    -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-inset -4px -4px 6px 0 rgba(255,255,255,.9),
-inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+        inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+a:hover {
+    background-color: blue;
+    /* 호버 시 배경 색상 */
 }
