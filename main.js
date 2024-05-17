@@ -170,11 +170,11 @@ fetch('record.txt')
 
         // Generating table rows for each car name
         lines.forEach((line, index) => {
-            const numbers = line.split(' ');  // 공백을 기준으로 문자열 분리
-            let today = parseInt(numbers[0]) ;
-            let today_7 = parseInt(numbers[1]) ;
-            let today_14 = parseInt(numbers[2]) ;
-            let today_21 = parseInt(numbers[3]) ;
+            const number = line.split(' ');  // 공백을 기준으로 문자열 분리
+            let today = parseInt(number[0]) ;
+            let today_7 = parseInt(number[1]) ;
+            let today_14 = parseInt(number[2]) ;
+            let today_21 = parseInt(number[3]) ;
             const row = table.insertRow();
             const cell1 = row.insertCell(0);
             const cell2 = row.insertCell(1);
