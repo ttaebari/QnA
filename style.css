@@ -136,8 +136,9 @@ td {
 }
 
 tr.dynamic-row {
-    height: 200px; /* 동적으로 추가되는 행의 높이 */
+    height: 150px; /* 동적으로 추가되는 행의 높이 */
 }
+
 
 th {
     background-color: ivory;

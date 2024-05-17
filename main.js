@@ -158,8 +158,13 @@ fetch('record.txt')
             const cell5 = row.insertCell(4);
             const cell6 = row.insertCell(5);
             const cell7 = row.insertCell(6);
-            cell1.textContent = index + 1;
-            cell2.textContent = "재료 수급";
+            cell1.textContent = index;
+            if (index === 0){
+                cell2.textContent = "총합";
+            }
+            else{
+                cell2.textContent = "재료 수급";
+            }
             cell3.textContent = today;
             cell4.textContent = today_7;
             cell5.textContent = today_14;
@@ -224,13 +229,18 @@ fetch('record.txt')
             const cell5 = row.insertCell(4);
             const cell6 = row.insertCell(5);
             const cell7 = row.insertCell(6);
-            cell1.textContent = index + 1;
-            cell2.textContent = "industry";
+            cell1.textContent = index;
+            if (index === 0){
+                cell2.textContent = "Total";
+            }
+            else{
+                cell2.textContent = "industry";
+            }
             cell3.textContent = today;
             cell4.textContent = today_7;
             cell5.textContent = today_14;
             cell6.textContent = today_21;
-            const canvas = document.createElement('e-canvas');
+            const canvas = document.createElement('canvas');
             canvas.id = 'chart' + index;
             cell7.appendChild(canvas);
 
