@@ -22,8 +22,8 @@ fetch('main.txt')
             cell2.textContent = today;
             cell3.textContent = yesterday;
             cell4.textContent = today - yesterday;
-            cell5.innerHTML = '<a onclick = "showDetails()">자세히보기</a>';
-            cell6.innerHTML = '<a onclick = "showRecords()">점수기록 보기</a>';
+            cell5.innerHTML = '<a onclick = "showDetails()" style = "cursor: pointer;">자세히보기</a>';
+            cell6.innerHTML = '<a onclick = "showRecords()" style = "cursor: pointer;">점수기록 보기</a>';
             if (today > yesterday) {
                 row.classList.add('high-score');
             } else if (today === yesterday) {
@@ -57,8 +57,8 @@ fetch('main.txt')
             cell2.textContent = today;
             cell3.textContent = yesterday
             cell4.textContent = today - yesterday
-            cell5.innerHTML = '<a onclick = "e_showDetails()">Click Details</a>';
-            cell6.innerHTML = '<a onclick = "e_showRecords()">Click Records</a>';
+            cell5.innerHTML = '<a onclick = "e_showDetails()" style = "cursor: pointer;">Click Details</a>';
+            cell6.innerHTML = '<a onclick = "e_showRecords()" style = "cursor: pointer;">Click Records</a>';
             if (today > yesterday) {
                 row.classList.add('high-score');
             } else if (today === yesterday) {
