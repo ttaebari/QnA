@@ -34,7 +34,7 @@ h3 {
 
 .upper {
     margin: auto;
-    width: 95%;
+    width: 90%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -52,7 +52,7 @@ h3 {
 
 .e-upper {
     margin: auto;
-    width: 95%;
+    width: 90%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -69,7 +69,7 @@ h3 {
 }
 
 .translate {
-    width: 95%;
+    width: 90%;
     /* 표와 같은 너비를 가짐 */
     height: 10px;
     text-align: right;
@@ -84,7 +84,7 @@ h3 {
 }
 
 .e-translate {
-    width: 95%;
+    width: 90%;
     /* 표와 같은 너비를 가짐 */
     height: 10px;
     text-align: right;
@@ -115,7 +115,7 @@ h3 {
 }
 
 table {
-    width: 95%;
+    width: 90%;
     /* div 내에서 전체 너비 사용 */
     border-collapse: collapse;
     margin-top: 20px;
