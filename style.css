@@ -7,7 +7,7 @@ body {
 }
 
 div {
-    width: 95%;
+    width: 100%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -22,15 +22,19 @@ div {
     margin: auto;
 }
 
+h2 {
+    margin-left: 10px;
+}
+
 h3 {
-    width: 400px;
+    width: 30%;
     margin-left: 10px;
 }
 
 
 .upper {
     margin: auto;
-    width: 1500px;
+    width: 95%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -48,7 +52,7 @@ h3 {
 
 .e-upper {
     margin: auto;
-    width: 1500px;
+    width: 95%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -65,7 +69,7 @@ h3 {
 }
 
 .translate {
-    width: 1600px;
+    width: 95%;
     /* 표와 같은 너비를 가짐 */
     height: 10px;
     text-align: right;
@@ -80,7 +84,7 @@ h3 {
 }
 
 .e-translate {
-    width: 1600px;
+    width: 95%;
     /* 표와 같은 너비를 가짐 */
     height: 10px;
     text-align: right;
@@ -95,7 +99,6 @@ h3 {
 }
 
 .scroll-container {
-    margin: 0 auto;
     width: 100%;
     max-height: 900px;
     /* 최대 높이 설정 */
@@ -104,7 +107,6 @@ h3 {
 }
 
 .e-scroll-container {
-    margin: 0 auto;
     width: 100%;
     max-height: 900px;
     /* 최대 높이 설정 */
@@ -113,7 +115,7 @@ h3 {
 }
 
 table {
-    width: 1600px;
+    width: 95%;
     /* div 내에서 전체 너비 사용 */
     border-collapse: collapse;
     margin-top: 20px;
@@ -136,7 +138,8 @@ td {
 }
 
 tr.dynamic-row {
-    height: 150px; /* 동적으로 추가되는 행의 높이 */
+    height: 150px;
+    /* 동적으로 추가되는 행의 높이 */
 }
 
 
@@ -164,12 +167,22 @@ th {
     display: inline-block;
     margin-top: 10px;
     /* 버튼과 표 사이 간격 */
+    margin: 10px;
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: column;
+    /* 자식 요소들을 세로로 정렬 */
 }
 
 .e-button-container {
     display: inline-block;
     margin-top: 10px;
     /* 버튼과 표 사이 간격 */
+    margin: 10px;
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: column;
+    /* 자식 요소들을 세로로 정렬 */
 }
 
 button {
@@ -179,6 +192,10 @@ button {
     /* 버튼 위에 마우스를 올렸을 때 커서 변경 */
     margin: 0 5px;
     /* 버튼 사이 간격 */
+}
+
+.btn-3 {
+    margin-top: 10px;
 }
 
 .btn-2 {
@@ -204,4 +221,47 @@ button {
 a:hover {
     background-color: blue;
     /* 호버 시 배경 색상 */
+}
+.img-container{
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* 버튼 위에 마우스를 올렸을 때 커서 변경 */
+}
+
+
+.bank-button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4열을 동일한 크기로 설정 */
+    grid-template-rows: repeat(2, 1fr);
+    /* 2행을 동일한 크기로 설정 */
+    gap: 10px;
+    /* 버튼 사이의 간격 */
+    width: 50%;
+    /* 컨테이너의 폭 설정 */
+    margin: auto;
+    /* 페이지 중앙 정렬 */
+    margin-bottom: 20px;
+}
+
+.foot {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(206, 206, 206);
+}
+
+
+.foot div {
+    font-weight: 550;
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    color: black;
+    padding: 0;
+}
+
+.line {
+    margin-left: 5%;
+    border-top: 1px solid black;
 }

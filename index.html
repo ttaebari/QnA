@@ -8,217 +8,266 @@
 </head>
 
 <body>
-    <div class="scroll-container" style="display: flex;">
-        <div>
-            <div class="upper">
-                <h3>우리는 CCI에 근거한 재산의 결정에 <br>
-                    책임이 없음을 분명히 합니다
-                </h3>
-                <h1>CCI : 삼성전자 종합지수</h1>
-                <h3 id="current_date">
-                    <script>
-                        date = new Date();
-                        year = date.getFullYear()
-                        month = date.getMonth() + 1;
-                        day = date.getDate();
-                        document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
-                    </script>
-                </h3>
-            </div>
-            <div class="translate">
-                <h2 onclick="translate_eng()">영어</h2>
-                <h2> /</h2>
-                <h2 onclick="translate_kor()">한국어</h2>
-            </div>
-            <div id="mainTable" style="display: table;">
-                <table id="mt">
-                    <tr>
-                        <th>기업</th>
-                        <th>오늘 점수</th>
-                        <th>이전 점수</th>
-                        <th>+ or -</th>
-                        <th>바뀐 변화</th>
-                        <th>점수 기록</th>
-                    </tr>
-                </table>
-            </div>
-            <div id="detailTable" style="display: none;">
-                <table id="dt">
-                    <tr>
-                        <th></th>
-                        <th>구분</th>
-                        <th>오늘 점수</th>
-                        <th>어제 점수</th>
-                        <th>+ or -</th>
-                    </tr>
-                </table>
-            </div>
-            <div id="recordTable" style="display: none;">
-                <table id="rt">
-                    <tr>
-                        <th></th>
-                        <th>구분</th>
-                        <th id="today">
-                            <script>
-                                date = new Date();
-                                year = date.getFullYear()
-                                month = date.getMonth() + 1;
-                                day = date.getDate();
-                                document.getElementById("today").innerHTML = year + "/" + month + "/" + day;
-                            </script>
-                        </th>
-                        <th id="today-7">
-                            <script>
-                                date = new Date();
-                                year = date.getFullYear()
-                                month = date.getMonth();
-                                day = date.getDate();
-                                date1 = new Date(year, month, day - 7);
-                                year = date1.getFullYear()
-                                month = date1.getMonth() + 1;
-                                day = date1.getDate();
-                                document.getElementById("today-7").innerHTML = year + "/" + month + "/" + day;
-                            </script>
-                        </th>
-                        <th id="today-14">
-                            <script>
-                                date = new Date();
-                                year = date.getFullYear()
-                                month = date.getMonth();
-                                day = date.getDate();
-                                date1 = new Date(year, month, day - 14);
-                                year = date1.getFullYear()
-                                month = date1.getMonth() + 1;
-                                day = date1.getDate();
-                                document.getElementById("today-14").innerHTML = year + "/" + month + "/" + day;
-                            </script>
-                        </th>
-                        <th id="today-21">
-                            <script>
-                                date = new Date();
-                                year = date.getFullYear()
-                                month = date.getMonth();
-                                day = date.getDate();
-                                date1 = new Date(year, month, day - 21);
-                                year = date1.getFullYear()
-                                month = date1.getMonth() + 1;
-                                day = date1.getDate();
-                                document.getElementById("today-21").innerHTML = year + "/" + month + "/" + day;
-                            </script>
-                        </th>
-                        <th>점수 곡선</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="button-container">
-                <button class="btn-2" onclick="showOriginal()">원본 보기</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="e-scroll-container" style="display: none;">
-        <div class="e-upper">
-            <h3>we clarify that we are not reponsible for <br>
-                the decisions of the prties based on CCI
-            </h3>
-            <h1>CCI : Samsung Electronics</h1>
-            <h3 id="e-current_date">
-                <script>
-                    date = new Date();
-                    year = date.getFullYear()
-                    month = date.getMonth() + 1;
-                    day = date.getDate();
-                    document.getElementById("e-current_date").innerHTML = year + "/" + month + "/" + day;
-                </script>
-            </h3>
-        </div>
-        <div class="e-translate">
-            <h2 onclick="translate_eng()">eng</h2>
-            <h2> /</h2>
-            <h2 onclick="translate_kor()">korean</h2>
-        </div>
-        <div id="e-mainTable" style="display: table;">
-            <table id="e-mt">
-                <tr>
-                    <th>Company</th>
-                    <th>Today Index</th>
-                    <th>Last Index</th>
-                    <th>+ or -</th>
-                    <th>Factor of Change</th>
-                    <th>Index Records</th>
-                </tr>
-            </table>
-        </div>
-        <div id="e-detailTable" style="display: none;">
-            <table id="e-dt">
-                <tr>
-                    <th></th>
-                    <th>Type</th>
-                    <th>Today Score</th>
-                    <th>Last Score</th>
-                    <th>+ or -</th>
-                </tr>
-            </table>
-        </div>
-        <div id="e-recordTable" style="display: none;">
-            <table id="e-rt">
-                <tr>
-                    <th></th>
-                    <th>Type</th>
-                    <th id="e-today">
+    <div class="wrapper" style="overflow-y:hidden;">
+        <div class="scroll-container" style="display: flex;">
+            <div>
+                <div class="upper">
+                    <h3>우리는 CCI에 근거한 재산의 결정에 <br>
+                        책임이 없음을 분명히 합니다
+                    </h3>
+                    <h1>CCI : 삼성전자 종합지수</h1>
+                    <h3 id="current_date">
                         <script>
                             date = new Date();
                             year = date.getFullYear()
                             month = date.getMonth() + 1;
                             day = date.getDate();
-                            document.getElementById("e-today").innerHTML = year + "/" + month + "/" + day;
+                            document.getElementById("current_date").innerHTML = "날짜 : " + year + "/" + month + "/" + day;
                         </script>
-                    </th>
-                    <th id="e-today-7">
-                        <script>
-                            date = new Date();
-                            year = date.getFullYear()
-                            month = date.getMonth();
-                            day = date.getDate();
-                            date1 = new Date(year, month, day - 7);
-                            year = date1.getFullYear()
-                            month = date1.getMonth() + 1;
-                            day = date1.getDate();
-                            document.getElementById("e-today-7").innerHTML = year + "/" + month + "/" + day;
-                        </script>
-                    </th>
-                    <th id="e-today-14">
-                        <script>
-                            date = new Date();
-                            year = date.getFullYear()
-                            month = date.getMonth();
-                            day = date.getDate();
-                            date1 = new Date(year, month, day - 14);
-                            year = date1.getFullYear()
-                            month = date1.getMonth() + 1;
-                            day = date1.getDate();
-                            document.getElementById("e-today-14").innerHTML = year + "/" + month + "/" + day;
-                        </script>
-                    </th>
-                    <th id="e-today-21">
-                        <script>
-                            date = new Date();
-                            year = date.getFullYear()
-                            month = date.getMonth();
-                            day = date.getDate();
-                            date1 = new Date(year, month, day - 21);
-                            year = date1.getFullYear()
-                            month = date1.getMonth() + 1;
-                            day = date1.getDate();
-                            document.getElementById("e-today-21").innerHTML = year + "/" + month + "/" + day;
-                        </script>
-                    </th>
-                    <th>Score Curve</th>
-                </tr>
-            </table>
+                    </h3>
+                </div>
+                <div class="translate">
+                    <h2 onclick="translate_eng()">영어</h2>
+                    <h2> /</h2>
+                    <h2 onclick="translate_kor()">한국어</h2>
+                </div>
+                <div id="mainTable" style="display: table;">
+                    <table id="mt">
+                        <tr>
+                            <th>기업</th>
+                            <th>현재 점수</th>
+                            <th>이전 점수</th>
+                            <th>점수 변화</th>
+                            <th>변화 요인</th>
+                            <th>과거 점수 보기</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="detailTable" style="display: none;">
+                    <table id="dt">
+                        <tr>
+                            <th></th>
+                            <th>구분</th>
+                            <th>오늘 점수</th>
+                            <th>어제 점수</th>
+                            <th>+ or -</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="recordTable" style="display: none;">
+                    <table id="rt">
+                        <tr>
+                            <th></th>
+                            <th>구분</th>
+                            <th id="today">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth() + 1;
+                                    day = date.getDate();
+                                    document.getElementById("today").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="today-7">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 7);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("today-7").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="today-14">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 14);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("today-14").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="today-21">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 21);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("today-21").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th>점수 곡선</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="button-container">
+                    <button class="btn-2" onclick="showOriginal()">원본 보기</button>
+                    <button class="btn-3" onclick="go('https://www.xn--989a170ahhpsgb.com/')">삼성전자 최신 통계모음 바로가기</button>
+                </div>
+                <div class="img-container" onclick="go('https://www.xn--989a170ahhpsgb.com/')"><img src="bank.png" width="80%" height="600"/></div>
+                <div class="bank-button-container">
+                    <button class="samsung" onclick="go('https://www.samsungpop.com/')">삼성증권</button>
+                    <button class="bnk" onclick="go('https://www.bnkfn.co.kr/main.jspx')">BNK증권</button>
+                    <button class="sk" onclick="go('http://www.priden.com/')">SK증권</button>
+                    <button class="uanta" onclick="go('https://www.myasset.com/myasset/main/index.cmd')">유안타증권</button>
+                    <button class="kb" onclick="go('https://www.nps.or.kr/jsppage/nps_gate.jsp')">국민연금</button>
+                    <button class="school" onclick="go('https://www.ktcu.or.kr/index')">교직원공제회</button>
+                    <button class="army" onclick="go('https://www.mps.mil.kr/main.do')">군인연금</button>
+                    <button class="bug" onclick="go('https://www.bloomberg.co.kr/')">블룸버그</button>
+                </div>
+                <div class="foot">
+                    <div>상호명 : 통계뱅크(주)</div>
+                    <div>대표이사 : 이경만</div>
+                    <div>주소 : 부산광역시 부산진구 서전로 8, 3층 DD-14</div>
+                    <div>이메일 : knowledge_vitamin@naver.com</div>
+                    <div>Tel : 02)562-6578 ㅣ Fax : 02)562-6577 </div>
+                    <div>사업자등록번호 : 605-88-02382</div>
+                    <div>통신판매사업자 등록번호 : 제 2022-부산부산진-1707 호</div>
+                    <div class="line" style="width: 50%;"></div>
+                    <div>Copyright ⓒ 2024 통계뱅크 All rights reserved.</div>
+                </div>
+            </div>
         </div>
-        <div class="e-button-container">
-            <button class="btn-2" onclick="e_showOriginal()">show Original</button>
+        <div class="e-scroll-container" style="display: none;">
+            <div>
+                <div class="e-upper">
+                    <h3>we clarify that we are not reponsible for <br>
+                        the decisions of the prties based on CCI
+                    </h3>
+                    <h1>CCI : Samsung Electronics</h1>
+                    <h3 id="e-current_date">
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear()
+                            month = date.getMonth() + 1;
+                            day = date.getDate();
+                            document.getElementById("e-current_date").innerHTML = "Date : " + year + "/" + month + "/" + day;
+                        </script>
+                    </h3>
+                </div>
+                <div class="e-translate">
+                    <h2 onclick="translate_eng()">eng</h2>
+                    <h2> /</h2>
+                    <h2 onclick="translate_kor()">korean</h2>
+                </div>
+                <div id="e-mainTable" style="display: table;">
+                    <table id="e-mt">
+                        <tr>
+                            <th>Company</th>
+                            <th>Today Index</th>
+                            <th>Last Index</th>
+                            <th>+ or -</th>
+                            <th>Factor of Change</th>
+                            <th>Index Records</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="e-detailTable" style="display: none;">
+                    <table id="e-dt">
+                        <tr>
+                            <th></th>
+                            <th>Type</th>
+                            <th>Today Score</th>
+                            <th>Last Score</th>
+                            <th>+ or -</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="e-recordTable" style="display: none;">
+                    <table id="e-rt">
+                        <tr>
+                            <th></th>
+                            <th>Type</th>
+                            <th id="e-today">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth() + 1;
+                                    day = date.getDate();
+                                    document.getElementById("e-today").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="e-today-7">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 7);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("e-today-7").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="e-today-14">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 14);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("e-today-14").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th id="e-today-21">
+                                <script>
+                                    date = new Date();
+                                    year = date.getFullYear()
+                                    month = date.getMonth();
+                                    day = date.getDate();
+                                    date1 = new Date(year, month, day - 21);
+                                    year = date1.getFullYear()
+                                    month = date1.getMonth() + 1;
+                                    day = date1.getDate();
+                                    document.getElementById("e-today-21").innerHTML = year + "/" + month + "/" + day;
+                                </script>
+                            </th>
+                            <th>Score Curve</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="e-button-container">
+                    <button class="btn-2" onclick="e_showOriginal()">show Original</button>
+                    <button class="btn-3" onclick="go('https://www.xn--989a170ahhpsgb.com/')">삼성전자 최신 통계모음 바로가기</button>
+                </div>
+                <div class="img-container" onclick="go('https://www.xn--989a170ahhpsgb.com/')"><img src="bank.png" width="80%" height="600"/></div>
+                <div class="bank-button-container">
+                    <button class="samsung" onclick="go('https://www.samsungpop.com/')">삼성증권</button>
+                    <button class="bnk" onclick="go('https://www.bnkfn.co.kr/main.jspx')">BNK증권</button>
+                    <button class="sk" onclick="go('http://www.priden.com/')">SK증권</button>
+                    <button class="uanta" onclick="go('https://www.myasset.com/myasset/main/index.cmd')">유안타증권</button>
+                    <button class="kb" onclick="go('https://www.nps.or.kr/jsppage/nps_gate.jsp')">국민연금</button>
+                    <button class="school" onclick="go('https://www.ktcu.or.kr/index')">교직원공제회</button>
+                    <button class="army" onclick="go('https://www.mps.mil.kr/main.do')">군인연금</button>
+                    <button class="bug" onclick="go('https://www.bloomberg.co.kr/')">블룸버그</button>
+                </div>
+                <div class="foot">
+                    <div>상호명 : 통계뱅크(주)</div>
+                    <div>대표이사 : 이경만</div>
+                    <div>주소 : 부산광역시 부산진구 서전로 8, 3층 DD-14</div>
+                    <div>이메일 : knowledge_vitamin@naver.com</div>
+                    <div>Tel : 02)562-6578 ㅣ Fax : 02)562-6577 </div>
+                    <div>사업자등록번호 : 605-88-02382</div>
+                    <div>통신판매사업자 등록번호 : 제 2022-부산부산진-1707 호</div>
+                    <div class="line" style="width: 50%;"></div>
+                    <div>Copyright ⓒ 2024 통계뱅크 All rights reserved.</div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>

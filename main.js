@@ -347,3 +347,7 @@ function translate_kor() {
     const table2 = document.querySelector('.e-scroll-container');
     table2.style.display = "none";
 }
+
+function go(url){
+    window.open(url, '_blank');
+}
