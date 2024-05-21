@@ -1,6 +1,7 @@
 import openpyxl
 import openai
 from datetime import date
+import pandas as pd
 
 start = 3
 end = 4
@@ -17,8 +18,7 @@ full_range = f_range + g_range
 def query_and_update_excel(sheet,read_cell, answer_cell):
 
     # 지정된 셀에서 질문 읽기
-    # question = "In " + str(date.today()) + sheet[read_cell].value
-    question = "2023년 12월 8일 " + sheet[read_cell].value
+    question = "2022년 9월 8일 " + sheet[read_cell].value
     # OpenAI GPT로 질문하고 응답 받기 (업데이트된 API 방식 사용)
     response = openai.ChatCompletion.create(
         model="gpt-4-turbo",
@@ -39,24 +39,37 @@ def query_and_update_excel(sheet,read_cell, answer_cell):
             value = int(text[i+1])
             break
         elif(text[i] == '-'):
-            value = int(text[i+1])
+            value = int(text[i+1]) * -1
             break 
     # 응답을 지정된 셀에 저장
-    sheet[answer_cell].value = value
+    sheet[answer_cell].value = text
+
+def save_excel_column_to_txt(file_path, output_path):
+    # Load Excel file
+    df = pd.read_excel(file_path)
+    
+    # Extract column A
+    cell_data = df.iloc[1, 6:8]  # Assuming column 'A' is the first column
+    
+    
+    # Save the integer data to a text file, each on a new line
+    with open(output_path, 'w') as file:
+        for value in cell_data:
+            file.write(f"{value}\n")
 
 
 def run():
     openai.api_key = ''
-    workbook = openpyxl.load_workbook("C:\\Users\\DC\\Desktop\\testqna2.xlsx")
+    workbook = openpyxl.load_workbook("C:\\Users\\DC\\Desktop\\vscode_project\\QnA_project\\testqna.xlsx")
     sheet = workbook.active
     #sheet.insert_cols(11)
     #sheet["K2"].value = str(date.today())
     for i in range(gap):
         query_and_update_excel(sheet,full_range[i],full_range[i+gap]) 
-    workbook.save("C:\\Users\\DC\\Desktop\\testqna2.xlsx")
+    workbook.save("C:\\Users\\DC\\Desktop\\vscode_project\\QnA_project\\testqna.xlsx")
     workbook.close()
     
 print("start")
 run()
 print('end')
-
+# save_excel_column_to_txt("C:\\Users\\DC\\Desktop\\vscode_project\\QnA_project\\testqna.xlsx","C:\\Users\\DC\\Desktop\\vscode_project\\QnA_project\\car.txt")

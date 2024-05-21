@@ -159,10 +159,10 @@ fetch('record.txt')
             const cell6 = row.insertCell(5);
             const cell7 = row.insertCell(6);
             cell1.textContent = index;
-            if (index === 0){
+            if (index === 0) {
                 cell2.textContent = "총합";
             }
-            else{
+            else {
                 cell2.textContent = "재료 수급";
             }
             cell3.textContent = today;
@@ -230,10 +230,10 @@ fetch('record.txt')
             const cell6 = row.insertCell(5);
             const cell7 = row.insertCell(6);
             cell1.textContent = index;
-            if (index === 0){
+            if (index === 0) {
                 cell2.textContent = "Total";
             }
-            else{
+            else {
                 cell2.textContent = "industry";
             }
             cell3.textContent = today;
@@ -348,6 +348,6 @@ function translate_kor() {
     table2.style.display = "none";
 }
 
-function go(url){
+function go(url) {
     window.open(url, '_blank');
 }
