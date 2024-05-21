@@ -122,7 +122,7 @@ table {
     margin-top: 20px;
     margin: auto;
     /* 제목과 표 사이 간격 */
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 800;
     table-layout: fixed;
     /* 테이블 레이아웃 고정 */
@@ -223,7 +223,9 @@ a:hover {
     background-color: blue;
     /* 호버 시 배경 색상 */
 }
-.img-container{
+
+.img-container {
+    width: 90%;
     margin-bottom: 10px;
     cursor: pointer;
     /* 버튼 위에 마우스를 올렸을 때 커서 변경 */
@@ -265,23 +267,24 @@ a:hover {
     position: relative;
     width: 80%;
     padding: 0;
-    margin :10px;
-}
-.foot-left p{
-    font-weight: 550;
-    width: 100%;
-    text-align: left;
-    font-size: 18px;
-    color: black;
-    padding: 0;
-    margin-bottom:2px ;
+    margin: 10px;
 }
 
-.foot-right p{
-    font-weight: 300;
+.foot-left p {
+    font-weight: 700;
     width: 100%;
     text-align: left;
     font-size: 14px;
+    color: black;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.foot-right p {
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
     color: black;
     padding: 0;
     margin: 0;
