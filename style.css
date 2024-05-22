@@ -234,17 +234,30 @@ a:hover {
 
 .bank-button-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     /* 4열을 동일한 크기로 설정 */
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
     /* 2행을 동일한 크기로 설정 */
     gap: 10px;
     /* 버튼 사이의 간격 */
-    width: 50%;
+    width: 90%;
     /* 컨테이너의 폭 설정 */
     margin: auto;
     /* 페이지 중앙 정렬 */
     margin-bottom: 20px;
+}
+
+.img-div{
+    cursor: pointer;
+    object-fit:cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-div img{
+    width: 50%;
+    height: 50%;
 }
 
 .foot {
