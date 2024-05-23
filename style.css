@@ -53,6 +53,7 @@ h3 {
 
 .upper img{
     mix-blend-mode: multiply;
+
 }
 
 .upper h1{
@@ -80,12 +81,13 @@ h3 {
     /* 제목 아래 여백 */
 }
 
+
 .e-upper img{
     mix-blend-mode: multiply;
 }
 
 .e-upper h1{
-    width: 40%;
+    width: 45%;
     background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
     box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
     border-radius: 50px;
