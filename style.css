@@ -35,7 +35,7 @@ h3 {
 
 .upper {
     margin: auto;
-    width: 90%;
+    width: 100%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -47,13 +47,24 @@ h3 {
     /* 세로 중심으로 자식 요소 정렬 */
     justify-content: space-between;
     /* 각 요소를 양 끝과 중앙에 배치 */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* 제목 아래 여백 */
+}
+
+.upper img{
+    mix-blend-mode: multiply;
+}
+
+.upper h1{
+    width: 35%;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    border-radius: 50px;
 }
 
 .e-upper {
     margin: auto;
-    width: 90%;
+    width: 100%;
     /* 표와 같은 너비를 가짐 */
     text-align: center;
     /* 텍스트 중앙 정렬 */
@@ -65,8 +76,19 @@ h3 {
     /* 세로 중심으로 자식 요소 정렬 */
     justify-content: space-between;
     /* 각 요소를 양 끝과 중앙에 배치 */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* 제목 아래 여백 */
+}
+
+.e-upper img{
+    mix-blend-mode: multiply;
+}
+
+.e-upper h1{
+    width: 35%;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    border-radius: 50px;
 }
 
 .translate {
@@ -196,8 +218,36 @@ button {
 }
 
 .btn-3 {
+    width: 320px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
     margin-top: 10px;
 }
+
+.btn-3:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
 
 .btn-2 {
     color: #fff;
@@ -242,23 +292,29 @@ a:hover {
     /* 버튼 사이의 간격 */
     width: 90%;
     /* 컨테이너의 폭 설정 */
-    margin: auto;
+    height: 300px;
     /* 페이지 중앙 정렬 */
     margin-bottom: 20px;
 }
 
-.img-div{
+.img-div {
     cursor: pointer;
-    object-fit:cover;
+    object-fit: cover;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.img-div img{
+.img-div img {
     width: 50%;
     height: 50%;
 }
+
+.img-div img:hover{
+    width: 60%;
+    height: 60%;
+}
+
 
 .foot {
     display: grid;
@@ -267,7 +323,7 @@ a:hover {
     grid-template-rows: repeat(1, 1fr);
     /* 2행을 동일한 크기로 설정 */
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-color: rgb(206, 206, 206);
 }
 
