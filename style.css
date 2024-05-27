@@ -53,10 +53,10 @@ h3 {
 
 @media (max-width: 1200px) {
     h1 {
-        font-size: 10px; /* 글꼴 크기를 줄임 */
+        font-size: 18px; /* 글꼴 크기를 줄임 */
     }
     h3 {
-        font-size: 6px; /* 글꼴 크기를 줄임 */
+        font-size: 14px; /* 글꼴 크기를 줄임 */
     }
 }
 
