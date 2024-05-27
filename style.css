@@ -51,7 +51,7 @@ h3 {
     /* 제목 아래 여백 */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     h1 {
         font-size: 10px; /* 글꼴 크기를 줄임 */
     }
